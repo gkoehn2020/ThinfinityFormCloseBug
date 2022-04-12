@@ -22,25 +22,4 @@ object UIMain: TUIMain
     TabOrder = 0
     OnClick = btnShowSecondaryFormClick
   end
-  object pnlMsg: TPanel
-    Left = 0
-    Top = 103
-    Width = 311
-    Height = 69
-    Align = alBottom
-    Caption = 'Now try to view Form 2...'
-    Color = clRed
-    ParentBackground = False
-    TabOrder = 1
-    Visible = False
-    ExplicitTop = 64
-    ExplicitWidth = 263
-  end
-  object Timer1: TTimer
-    Enabled = False
-    Interval = 500
-    OnTimer = Timer1Timer
-    Left = 168
-    Top = 16
-  end
 end

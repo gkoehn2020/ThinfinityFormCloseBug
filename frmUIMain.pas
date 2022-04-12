@@ -9,9 +9,6 @@ uses
 type
   TUIMain = class(TForm)
     btnShowSecondaryForm: TButton;
-    Timer1: TTimer;
-    pnlMsg: TPanel;
-    procedure Timer1Timer(Sender: TObject);
     procedure btnShowSecondaryFormClick(Sender: TObject);
   private
     { Private declarations }
@@ -34,20 +31,6 @@ procedure TUIMain.btnShowSecondaryFormClick(Sender: TObject);
 begin
   btnShowSecondaryForm.Enabled := False;
   UISecondary.Show;
-end;
-
-procedure TUIMain.Timer1Timer(Sender: TObject);
-begin
-  lFlashCount := lFlashCount + 1;
-  UIMain.pnlMsg.Visible := True;
-  if pnlMsg.Color = clred then
-    pnlMsg.Color := clBtnFace
-  else
-    begin
-      pnlMsg.Color := clred;
-      pnlMsg.Repaint;
-    end;
-  if lFlashCount > 4 then Timer1.Enabled := False;
 end;
 
 end.

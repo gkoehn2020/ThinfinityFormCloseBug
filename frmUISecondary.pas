@@ -25,15 +25,11 @@ implementation
 
 {$R *.dfm}
 
-uses
-  frmUIMain
-  ;
 
 procedure TUISecondary.btnThreeClick(Sender: TObject);
 begin
   Showmessage('This will close this form. It should go away in the Taskbar/Menu. However, You will see it still in the Taskbar/Menu');
   btnThree.Enabled := False;
-  UIMain.Timer1.Enabled := True;
   close;
 end;
 
